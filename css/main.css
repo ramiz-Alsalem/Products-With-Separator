@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --main-color: #f73859;
+}
+ul {
+    list-style: none;
+}
+body {
+    font-family: 'work sans';
+    background-color: #20bfa9;
+}
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px
+    }
+}
+.box {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.box .title {
+    background-color: #2b2a2a;
+    height: 80px;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -ms-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0;
+}
+.box .title h3 {
+    font-weight: 600;
+}
+.box .title h3 span {
+    color: green;
+}
+.box .main-area {
+    width: 100%;
+    height: calc(100% - 80px + 25px);
+    border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    -ms-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+}
+.main-area .feat {
+    width: calc(100% - 50px);
+    height: calc(100% - 20px);
+    margin-top: -25px;
+    margin: -25px auto 0;
+    background-color: white;
+    box-shadow: 0 5px 10px #818181;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 20px;
+}
+.main-area .feat h3 {
+    font-size: 17px;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+.main-area .feat ul {
+    width: 100%;
+    padding: 20px 0 20px 30px;
+    font-size: 15px;
+    color: #010101;
+}
+.main-area .feat ul li {
+    position: relative;
+    margin-bottom: 10px;
+}
+.main-area .feat ul li::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: -17px;
+    top: 50%;
+    translate: 0 -50%;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.main-area .feat button {
+    display: block;
+    margin: auto;
+    width: fit-content;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+@media (min-width: 992px) {
+    .line {
+        height: 300px;
+        width: 200px;
+        position: relative;
+    }
+    .line::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        translate: -50%;
+        height: 100%;
+        width: 1px;
+        background-color: white;
+    }
+    .line::before {
+        content: 'OR';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        height: 40px;
+        width: 40px;
+        background-color: white;
+        z-index: 1;
+        font-weight: 600;
+        color: #20bfa9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+}
+@media (max-width: 991px) {
+    .container {
+        flex-direction: column;
+    }
+    .line {
+        height: 200px;
+        width: 300px;
+        position: relative;
+    }
+    .line::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        height: 1px;
+        width: 100%;
+        background-color: white;
+    }
+    .line::before {
+        content: 'OR';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        height: 40px;
+        width: 40px;
+        background-color: white;
+        z-index: 1;
+        font-weight: 600;
+        color: #20bfa9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+}
